@@ -5,15 +5,12 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles={
-    'personalpage': {
-       title : 'Pallab | Education',
-        heading : 'My educational qualifications',
-        date: 'October 4th, 2016',
+    'personal': {
+        title : 'Pallab | Personal Information',
+        heading : 'Personal Information',
+        date: 'October 3rd, 2016',
         content:  `<p>
-                    I passed ICSE for class tenth from Modern English Academy, a reputed english-medium school in Barrackpore in the year 2012, and secured 96% marks.
-                    I passed ISC for class twelfth from Modern English Academy in the year 2014,a nd secured 94.5% marks.
-                    In the same year, I appeared for WBJEE, securing rank 2286, and was admitted into Kalyani Government Engineering College in the CSE department, where I am currently pursuing my B.Tech course.
-                    I am interested in Web-Development, particularly in back-end and deployment of web apps.
+                    My name is Pallab Ganguly. I was born on 13th April, 1996. I live in Barrackpore, and I'm a third year student of CSE with the Kalyani Government Engineering College.
                     </p>`
     },
     'education': {
