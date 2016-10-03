@@ -8,7 +8,7 @@ var marginRight=0;
 
 function moveLeft(){
   marginRight+=10;
-  wow.style.marginRight=mmarginRight+'px';
+  wow.style.marginRight=marginRight+'px';
 };
 
 wow.onclick=function(){
