@@ -4,7 +4,7 @@ var element= document.getElementById("maintext");
 
 var wow= document.getElementById("dino");
 
-marginRight=0;
+var marginRight=0;
 
 function moveLeft(){
   marginRight+=10;
