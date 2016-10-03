@@ -14,7 +14,7 @@ var articles={
                     </p>`
     },
     'education': {
-         title : 'Pallab | Education',
+        title : 'Pallab | Education',
         heading : 'My educational qualifications',
         date: 'October 4th, 2016',
         content:  `<p>
