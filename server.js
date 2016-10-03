@@ -14,10 +14,6 @@ var personalpage={
             </p>`
 };
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
 function createTepmlate(data){
     var title=data.title;
     var date=data.date;
@@ -43,6 +39,10 @@ function createTepmlate(data){
 `;
 return templateOne;
 }
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 
 app.get('/personal', function (req, res) {
   //res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
