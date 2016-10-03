@@ -4,14 +4,34 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
-var personalpage={
-  title : 'Pallab | Personal Information',
-  heading : 'Personal Information',
-  date: 'October 3rd, 2016',
-  content:  `<p>
-                My name is Pallab Ganguly. I was born on 13th April, 1996. I live in Barrackpore, and I'm a third year student of CSE with the Kalyani Government Engineering College.
-            </p>`
+var articles={
+    'personalpage': {
+        title : 'Pallab | Personal Information',
+        heading : 'Personal Information',
+        date: 'October 3rd, 2016',
+        content:  `<p>
+                    My name is Pallab Ganguly. I was born on 13th April, 1996. I live in Barrackpore, and I'm a third year student of CSE with the Kalyani Government Engineering College.
+                    </p>`
+    },
+    'education': {
+         title : 'Pallab | Education',
+        heading : 'My educational qualifications',
+        date: 'October 4th, 2016',
+        content:  `<p>
+                    I passed ICSE for class tenth from Modern English Academy, a reputed english-medium school in Barrackpore in the year 2012, and secured 96% marks.
+                    I passed ISC for class twelfth from Modern English Academy in the year 2014,a nd secured 94.5% marks.
+                    In the same year, I appeared for WBJEE, securing rank 2286, and was admitted into Kalyani Government Engineering College in the CSE department, where I am currently pursuing my B.Tech course.
+                    I am interested in Web-Development, particularly in back-end and deployment of web apps.
+                    </p>`
+    },
+    'contact' : {
+         title : 'Pallab | Contact',
+        heading : 'Contact',
+        date: 'October 5th, 2016',
+        content:  `<p>
+                   You can contact me at some-email@example.com, or call at +12123456
+                    </p>`
+    }
 };
 
 function createTemplate(data){
@@ -46,9 +66,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/personal', function (req, res) {
+app.get('/:articleName', function (req, res) {
   //res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
-  res.send(createTemplate(personalpage));
+  var articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
