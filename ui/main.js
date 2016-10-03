@@ -12,6 +12,4 @@ button.onclick = function(){
         }
     }  
   };
-  //render the variable in the html page usign the span
-  counter+=1;
 };
