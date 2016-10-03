@@ -31,6 +31,8 @@ function createTepmlate(data){
             <div>${date}</div>
             <div>
                 <h5>${heading}</h5>
+            </div>
+            <div>
                 ${content}
             </div>
         </div>
