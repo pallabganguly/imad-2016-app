@@ -18,11 +18,17 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var templateOne=`<html>
-    <head>
-         <link href="/ui/style.css" rel="stylesheet" />
-       ${title}
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+function createTepmlate(data){
+    var title=data.title;
+    var date=data.date;
+    var heading=heading;
+    var content=title.content
+    var templateOne=
+    `<html>
+         <head>
+             <link href="/ui/style.css" rel="stylesheet" />
+                <title>${title}</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
     </head>
     <body>
         <div class="container">
@@ -35,9 +41,12 @@ var templateOne=`<html>
     </body>
 </html>
 `;
+return templateOne;
+}
 
 app.get('/personal', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
+  //res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
+  res.send(createTemplate(personalpage))
 });
 
 app.get('/ui/style.css', function (req, res) {
