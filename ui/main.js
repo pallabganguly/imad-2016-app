@@ -1,17 +1,9 @@
-console.log('Loaded!');
-
-var element= document.getElementById("maintext");
-
-var wow= document.getElementById("dino");
-
-var marginRight=0;
-
-function moveLeft(){
-  marginRight+=10;
-  wow.style.marginRight=marginRight+'px';
-};
-
-wow.onclick=function(){
-  //wow.style.marginLeft="100px";  
-  var interval = setInterval(moveLeft, 30);
+var button =document.getElementById("counter");
+var counter=0;
+button.onclick = function(){
+  //make a request to the counter endpoint
+  //capture the response and store it in a variable
+  //render the variable in the html page usign the span
+  var span=document.getElementById("count");
+  span.innerHTML=counter.toString();
 };
