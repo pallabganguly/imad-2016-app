@@ -48,7 +48,7 @@ app.get('/', function (req, res) {
 
 app.get('/personal', function (req, res) {
   //res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
-  res.send(createTemplate(personalpage))
+  res.send(createTemplate(personalpage));
 });
 
 app.get('/ui/style.css', function (req, res) {
