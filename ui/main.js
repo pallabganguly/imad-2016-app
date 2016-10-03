@@ -13,5 +13,5 @@ function moveLeft(){
 
 wow.onclick=function(){
   //wow.style.marginLeft="100px";  
-  var interval = setInterval(moveLeft, 55);
+  var interval = setInterval(moveLeft, 35);
 };
