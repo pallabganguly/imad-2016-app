@@ -4,6 +4,13 @@ var element= document.getElementById("maintext");
 
 var wow= document.getElementById("dino");
 
+marginRight=0;
+
+function moveLeft(){
+  marginRight+=10;
+  wow.style.marginRight=mmarginRight+'px';
+};
+
 wow.onclick=function(){
   //wow.style.marginLeft="100px";  
   var interval = setInterval(moveLeft, 100);
