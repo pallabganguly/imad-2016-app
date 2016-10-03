@@ -5,9 +5,36 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var personalpage={
+  title : 'Pallab | Personal Information',
+  heading : 'Personal Information',
+  date: 'October 3rd, 2016',
+  content:  `<p>
+                My name is Pallab Ganguly. I was born on 13th April, 1996. I live in Barrackpore, and I'm a third year student of CSE with the Kalyani Government Engineering College.
+            </p>`
+};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+var templateOne=`<html>
+    <head>
+         <link href="/ui/style.css" rel="stylesheet" />
+       ${title}
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body>
+        <div class="container">
+            <div>${date}</div>
+            <div>
+                <h5>${heading}</h5>
+                ${content}
+            </div>
+        </div>
+    </body>
+</html>
+`;
 
 app.get('/personal', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
