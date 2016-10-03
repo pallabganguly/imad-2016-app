@@ -48,7 +48,7 @@ function createTemplate(data){
     </head>
     <body>
         <div class="container">
-            <div>${date}</div>
+            <div><small>${date}</small></div>
             <div>
                 <h4>${heading}</h4>
             </div>
