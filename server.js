@@ -17,8 +17,8 @@ var personalpage={
 function createTepmlate(data){
     var title=data.title;
     var date=data.date;
-    var heading=heading;
-    var content=title.content
+    var heading=data.heading;
+    var content=data.content
     var templateOne=
     `<html>
          <head>
